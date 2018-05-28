@@ -4,7 +4,7 @@ class Athlete extends Person{
   String sport = "Running";
 
   String info(){
-    String info = "Hi, I am an athlete.";
+    String info = "Hi, I am an athlete. \n"+super.info();
     return info;
   }
 
