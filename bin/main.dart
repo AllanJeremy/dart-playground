@@ -1,6 +1,17 @@
 import 'hello.dart';
+import 'person.dart';
 
 void main()
+{
+  Person bob = new Person.initValues(21, 75.0,"Bob",["Chicken","Pork ribs"]);
+  print(bob.introduceSelf());
+  
+  print("${Person.getNumberOfPeople()} people created\n");
+  print(bob.info());
+}
+
+//Just a bunch of random tests with the language
+void randomTests()
 {
   print(naySayer("Can I have some food"));
   // querySelector("#Something")
@@ -30,14 +41,18 @@ void main()
 
   lambda(message) => "Message : $message";
   print(lambda("Hey how's it going"));
-  print ("Test : ${test("Come on",lambda)}");
+  print("Test : ${test("Come on",lambda)}");
 }
 
+//A function that takes a function as a parameter
 String test(String text,function)
 {
   return function(text);
 }
+
+//A function that returns the sum of two numbers
 int getSum(int num1,[int num2=0])
 {
   return (num1+num2);
 }
+
