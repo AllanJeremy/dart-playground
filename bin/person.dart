@@ -1,22 +1,22 @@
 class Person
 {
   //Class members
-  int _age;
-  double _weight;
+  int age;
+  double weight;
   String name = "No name";
   List<String> favoriteFoods = [];
 
-  double get weight => _weight; //Getter for the weight
-  set weight(double w) => (_weight = _weight>0.0 ? _weight : 0.1); //Setter for the weight
+  // double get weight => weight; //Getter for the weight
+  // set weight(double w) => (weight = weight>0.0 ? weight : 0.1); //Setter for the weight
 
-  int get age => _age;//Getter for the age
+  // int get age => age;//Getter for the age
 
   //Setter for the age
-  set age(int age_input){
-    if (_age <= 0) {
-      _age = 1;
-    }
-  }
+  // set age(int age_input){
+  //   if (age <= 0) {
+  //     age = 1;
+  //   }
+  // }
 
   //Static class member
   static int numberOfPeople = 0;
@@ -28,8 +28,8 @@ class Person
 
   //Constructor override ~ named constructor
   Person.initValues(int age,double weight,[String name, List<String> favoriteFoods]){
-    this._age = age;
-    this._weight = weight;
+    this.age = age;
+    this.weight = weight;
     this.name = name;
     this.favoriteFoods = favoriteFoods;
     

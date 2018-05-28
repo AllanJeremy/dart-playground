@@ -1,13 +1,17 @@
 import 'hello.dart';
 import 'person.dart';
+import 'athlete.dart';
 
 void main()
 {
   Person bob = new Person.initValues(21, 75.0,"Bob",["Chicken","Pork ribs"]);
   print(bob.introduceSelf());
   
-  print("${Person.getNumberOfPeople()} people created\n");
+  Athlete susan = new Athlete.initValues(24, 80.0, "Susan",["Salad"]);
+
   print(bob.info());
+  print(susan.info());
+  print("${Person.getNumberOfPeople()} people created\n");
 }
 
 //Just a bunch of random tests with the language
