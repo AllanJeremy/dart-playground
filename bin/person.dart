@@ -1,5 +1,10 @@
-class Person
+import 'organism.dart';
+
+class Person extends Organism
 {
+  String eats()=>"hukula";
+  String blood()=>"bleeds";
+  
   //Class members
   int age;
   double weight;
@@ -20,6 +25,9 @@ class Person
 
   //Static class member
   static int numberOfPeople = 0;
+
+  //Set the type
+  String get type => "Person";
 
   //Constructor
   Person(){
@@ -50,7 +58,7 @@ class Person
   String info(){
     String info = "Name : $name\n";
     info += "Age : ${age.toString()}\n";
-    info += "Favorite foods : ";
+    info += "${this.eats()} Favorite foods : ";
     
     //If there are any favorite foods
     if(this.favoriteFoods.length>0){
